@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  color: var(--light-cl);
+  color: var(--dark-cl);
 }
 
 :root {
@@ -19,12 +19,23 @@
   --transition: 0.3s ease-in-out;
 }
 
+@font-face {
+  font-family: 'Poppins-Bold';
+  src: url('/fonts/Poppins-Bold.ttf');
+}
+
+@font-face {
+  font-family: 'Poppins-Light';
+  src: url('/fonts/Poppins-Light.ttf');
+}
+
 a {
   text-decoration: none;
 }
 
 h1 {
   font-size: var(--hd-txt);
+  font-family: Poppins-Bold;
 }
 
 h3 {
@@ -34,6 +45,7 @@ h3 {
 a,
 p {
   font-size: var(--sm-txt);
+  font-family: Poppins-Light;
 }
 
 header {
@@ -50,10 +62,22 @@ header {
 section {
   display: flex;
   flex-direction: column;
+  width: 100%;
+  height: 100vh;
   justify-content: space-between;
   align-items: center;
   position: relative;
   padding: var(--md-pad);
+}
+
+.wrapper{
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
 }
 
 #logo {
@@ -78,4 +102,31 @@ img {
   height: 3px;
   background-color: var(--dark-cl);
   border-radius: 10px;
+}
+
+.text-con{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  height: auto;
+}
+
+.img-con{
+  display: flex;
+  flex-direction: column;
+  width: 350px;
+  height: 350px;
+  object-fit: cover;
+}
+
+
+
+
+
+
+
+
+/* MEDIA QUERY */
+@media (max-width: 750px) {
+  
 }
