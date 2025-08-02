@@ -163,8 +163,8 @@ img {
 .img-con {
   display: flex;
   flex-direction: column;
-  width: 350px;
-  height: 350px;
+  width: 450px;
+  height: 450px;
   object-fit: cover;
 }
 
