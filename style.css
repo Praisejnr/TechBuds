@@ -115,7 +115,8 @@ img {
 #nav-bar {
   top: 100%;
   left: 0;
-  display: none;
+  display: flex;
+  width: 30%;
   flex-direction: column;
   position: absolute;
   background-color: var(--light-cl);
@@ -130,9 +131,18 @@ img {
   background-color: var(--secondary-cl);
 }
 
+#nav-bar{
+  display: none;
+}
+
+#nav-bar.active{
+  display: flex;
+  transition: var(--transition);
+}
+
 .join-btn {
   width: fit-content;
-  background-color: var(--primary-cl);
+  background-color: var(--secondary-cl);
   color: var(--light-cl);
   border-radius: 10px;
   padding: var(--btn-pad);
@@ -193,13 +203,11 @@ img {
     justify-content: left;
     position: absolute;
     width: 100%;
+    transition: var(--transition);
   }
 
-#nav-bar{
-  display: none;
-}
 
-#nav-bar.active{
-  display: flex;
-}
+  #nav-bar{
+    width: 100%;
+  }
 }
