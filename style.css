@@ -11,8 +11,8 @@
   --primary-cl: #141;
   --secondary-cl: #191;
   --sm-txt: 1rem;
-  --bg-txt: 2rem;
-  --hd-txt: 3rem;
+  --bg-txt: 3rem;
+  --hd-txt: 5rem;
   --btn-pad: 10px 15px;
   --md-pad: 20px 30px;
   --lg-pad: 40px 60px;
@@ -81,6 +81,13 @@ section {
   position: relative;
 }
 
+#logo-con{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 #logo {
   width: 60px;
   height: 60px;
@@ -103,6 +110,21 @@ img {
   height: 3px;
   background-color: var(--dark-cl);
   border-radius: 10px;
+}
+
+.join-btn{
+  width: fit-content;
+  background-color: var(--primary-cl);
+  color: var(--light-cl);
+  border-radius: 10px;
+  padding: var(--btn-pad);
+  transition: var(--transition);
+}
+
+.join-btn:hover{
+  border: 1px solid var(--primary-cl);
+  background-color: var(--light-cl);
+  color: var(--primary-cl);
 }
 
 .text-con{
@@ -136,6 +158,16 @@ img {
 
 /* MEDIA QUERY */
 @media (max-width: 750px) {
+  :root {
+  --sm-txt: 0.8rem;
+  --bg-txt: 1.5rem;
+  --hd-txt: 2rem;
+  --btn-pad: 5px 10px;
+  --md-pad: 20px 30px;
+  --lg-pad: 40px 60px;
+  --transition: 0.3s ease-in-out;
+}
+
   section {
   display: flex;
   flex-direction: column;
