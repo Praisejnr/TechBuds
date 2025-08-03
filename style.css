@@ -12,7 +12,7 @@
   --primary-cl: #141;
   --secondary-cl: #191;
   --sm-txt: 0.8rem;
-  --bg-txt: 2rem;
+  --bg-txt: 1.5rem;
   --hd-txt: 3rem;
   --btn-pad: 10px 15px;
   --md-pad: 20px 30px;
@@ -181,7 +181,7 @@ img {
   width: 450px;
   height: 450px;
   object-fit: cover;
-  animation: slidein 5s infinite;
+  animation: fading 5s infinite;
   transition: var(--transition);
 }
 
@@ -236,9 +236,15 @@ img {
   display: flex;
   flex-direction: column;
   padding: var(--btn-pad);
-  width: 200px;
+  width: 300px;
   height: auto;
   gap: 10px;
+}
+
+.join .text-con h3,
+.front-blog-text h3,
+.card-text h3 {
+  line-height: 25px;
 }
 
 .card-text h3,
@@ -247,14 +253,19 @@ img {
   width: 170px;
 }
 
+#card-1 {
+  top: 50%;
+  left: 15%;
+}
+
 #card-2 {
   top: 50%;
-  left: 45%;
+  left: 52%;
 }
 
 #card-3 {
   top: 50%;
-  left: 80%;
+  left: 87%;
 }
 
 section:nth-child(even) {
@@ -268,9 +279,19 @@ section:nth-child(even) {
   color: var(--light-cl);
 }
 
+.blogs,
 .blogs .wrapper {
-  overflow-x: scroll;
+  width: 100%;
+  height: auto;
+}
+
+.blogs .wrapper {
+  overflow: hidden;
   gap: 20px;
+}
+
+.blogs .wrapper {
+  padding: var(--md-pad);
 }
 
 .front-blog {
@@ -308,17 +329,26 @@ section:nth-child(even) {
   width: 100px;
 }
 
-@keyframes slidein {
+.join-img-con,
+.join .text-con,
+.card-img {
+  animation: slidein linear;
+  animation-timeline: view();
+  animation-range: entry 0% cover 30%;
+  transition: var(--transition);
+}
+
+@keyframes fading {
   0% {
-    transform: translateX(0px);
+    opacity: 0;
   }
-  
+
   50% {
-    transform: translateX(20px);
+    opacity: 0;
   }
-  
+
   100% {
-    transform: translateX(0px);
+    opacity: 1;
   }
 }
 
@@ -326,47 +356,41 @@ section:nth-child(even) {
   0% {
     transform: translateX(0px);
   }
-  
+
   30% {
     transform: translateX(0px);
   }
-  
+
   60% {
     transform: translateX(-320px);
   }
-  
+
   80% {
     transform: translateX(-320px);
   }
-  
+
   90% {
     transform: translateX(-640px);
   }
-  
+
   100% {
     transform: translateX(-640px);
   }
-  
+
   100% {
     transform: translateX(0px);
   }
-  
 }
 
-@keyframes fading {
-  0% {
-    scale: 0.5;
+@keyframes slidein {
+  from {
     opacity: 0;
+    transform: translateX(-100px);
   }
-  
-  50% {
-    scale: 1;
+
+  to {
     opacity: 1;
-  }
-  
-  0% {
-    scale: 0.5;
-    opacity: 0;
+    transform: translateX(0px);
   }
 }
 
@@ -381,11 +405,11 @@ section:nth-child(even) {
     --lg-pad: 40px 60px;
     --transition: 0.3s ease-in-out;
   }
-  
+
   .img-con {
     display: none;
   }
-  
+
   .active {
     top: 70%;
     left: 0;
@@ -397,21 +421,21 @@ section:nth-child(even) {
     width: 100%;
     transition: var(--transition);
   }
-  
+
   #nav-bar {
     width: 100%;
   }
-  
+
   .front h1 {
     line-height: 35px;
   }
-  
+
   .front {
     background-image: url("/images/img2.png");
     background-repeat: no-repeat;
     background-size: cover;
   }
-  
+
   .cover {
     top: 0;
     left: 0;
@@ -421,11 +445,12 @@ section:nth-child(even) {
     background-color: var(--dark-cl);
     opacity: 0.7;
   }
-  
-  .mission, .mission .wrapper {
+
+  .mission,
+  .mission .wrapper {
     height: auto;
   }
-  
+
   .mission .wrapper {
     display: flex;
     flex-direction: column;
@@ -433,41 +458,45 @@ section:nth-child(even) {
     gap: 70px;
     padding: var(--md-pad);
   }
-  
+
   .card-text,
   .card {
     width: 300px;
   }
-  
+
   #card-1 {
     top: 15%;
     left: 42%;
   }
-  
+
   #card-2 {
     top: 48%;
     left: 48%;
   }
-  
+
   #card-3 {
     top: 84%;
     left: 48%;
   }
-  
+
   .front-blog {
     animation: autoscroll 30s infinite;
   }
-  
+
+  .blogs .wrapper {
+    overflow-x: scroll;
+  }
+
   .join .text-con {
     width: 200px;
   }
-  
+
   .front-blog-text h3,
   .card-text h3,
   .join .text-con h3 {
     line-height: 25px;
   }
-  
+
   .join-img-con {
     width: 300px;
     height: 300px;
@@ -476,16 +505,16 @@ section:nth-child(even) {
     overflow: hidden;
     border-radius: 50%;
   }
-  
+
   .join-img-con img {
     width: 400px;
   }
-  
+
   .contact .wrapper {
     display: flex;
     flex-direction: column;
   }
-  
+
   .contact-text-con {
     width: 260px;
   }

@@ -7,7 +7,7 @@ hamburger.addEventListener("click", () => {
   navBar.classList.toggle("active");
 });
 
-const images = ["/images/img1.png", "/images/img2.png", "/images/img3.png"];
+const images = ["/images/img5.png", "/images/img2.png", "/images/img3.png"];
 let index = 0;
 
 setInterval(() => {
