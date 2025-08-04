@@ -22,12 +22,16 @@
 
 @font-face {
   font-family: "Poppins-Bold";
-  src: url("assets\fonts\Poppins-Bold.ttf");
+  src: url("../../fonts/Poppins-Bold.ttf");
 }
 
 @font-face {
   font-family: "Poppins-Light";
-  src: url("assets\fonts\Poppins-Light.ttf");
+  src: url("../../fonts/Poppins-Light.ttf");
+}
+
+body{
+  background-color: var(--light-cl);
 }
 
 a {
@@ -100,8 +104,9 @@ img {
   width: 100%;
 }
 
-.svg {
-  width: 20px;
+i {
+  font-size: 15px;
+  color: var(--light-cl);
 }
 
 .hamburger {
@@ -162,6 +167,9 @@ img {
   background-color: var(--light-cl);
   color: var(--primary-cl);
   letter-spacing: 1px;
+  i {
+    color: var(--primary-cl);
+  }
 }
 
 .text-con {
@@ -338,6 +346,18 @@ section:nth-child(even) {
   transition: var(--transition);
 }
 
+.contact-social-links {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.contact-social-links a:hover {
+  i {
+    color: var(--secondary-cl);
+  }
+}
+
 @keyframes fading {
   0% {
     opacity: 0;
@@ -431,7 +451,7 @@ section:nth-child(even) {
   }
 
   .front {
-    background-image: url("images/img2.png");
+    background-image: url("../../images/img2.png");
     background-repeat: no-repeat;
     background-size: cover;
   }
