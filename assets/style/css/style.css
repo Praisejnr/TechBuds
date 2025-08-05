@@ -30,7 +30,7 @@
   src: url("../../fonts/Poppins-Light.ttf");
 }
 
-body{
+body {
   background-color: var(--light-cl);
 }
 
@@ -148,6 +148,17 @@ i {
   transition: var(--transition);
 }
 
+.switch {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.switch i {
+  font-size: var(--bg-txt);
+  color: var(--dark-cl);
+}
+
 .btn {
   display: flex;
   flex-direction: row;
@@ -189,7 +200,6 @@ i {
   width: 450px;
   height: 450px;
   object-fit: cover;
-  animation: fading 5s infinite;
   transition: var(--transition);
 }
 
